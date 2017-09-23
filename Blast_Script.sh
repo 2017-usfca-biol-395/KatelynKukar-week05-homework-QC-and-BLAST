@@ -17,3 +17,23 @@ do
     fastq-dump -v $SRA_number -O data/raw_data
 done
 echo "Download completed and moved to raw data"
+
+# Covert Fastq files to HTML in output directory
+fastqc data/raw_data/*.fastq --outdir=output/fastqc
+
+for file in $@
+do
+# Info on the Trimmomatic tool available here: http://www.usadellab.org/cms/index.php?page=trimmomatic
+# Trim Sequences for all Fastq files
+echo "trimming files"
+	TrimmomaticSE -threads 2 -phred33 data/raw_data/$file data/trimmed/$(basename -s .fastq $file).trim.fastq LEADING:5 TRAILING:5 SLIDINGWINDOW:8:25 MINLEN:150
+done
+echo "sequences trimmed"
+
+for file in $@
+do
+# Use Bioawk to convert trimmed sequences in to Blast format
+echo "converting trimmed sequences to fasta format for Blast"
+	bioawk -c fastx '{print ">"$name"\n"$seq}' data/trimmed/$file
+done
+echo "trimmed files now in fasta format"
