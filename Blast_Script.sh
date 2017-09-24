@@ -26,7 +26,7 @@ do
 # Info on the Trimmomatic tool available here: http://www.usadellab.org/cms/index.php?page=trimmomatic
 # Trim Sequences for all Fastq files
 	echo "trimming files"
-	TrimmomaticSE -threads 2 -phred33 data/raw_data/*.fastq data/trimmed/$(basename -s .fastq *.fastq).trim.fastq LEADING:5 TRAILING:5 SLIDINGWINDOW:8:25 MINLEN:150
+	TrimmomaticSE -threads 2 -phred33 $file data/trimmed/$(basename -s .fastq $file).trim.fastq LEADING:5 TRAILING:5 SLIDINGWINDOW:8:25 MINLEN:150
 	echo "sequences trimmed"
 done
 
@@ -34,6 +34,6 @@ for file in data/trimmed/*.trim.fastq
 do
 # Use Bioawk to convert trimmed sequences in to Blast format
 	echo "converting trimmed sequences to fasta format for Blast"
-	bioawk -c fastx '{print ">"$name"\n"$seq}' data/trimmed/*.trim.fastq
+	bioawk -c fastx '{print ">"$name"\n"$seq}' $file
 	echo "trimmed files now in fasta format"
 done
