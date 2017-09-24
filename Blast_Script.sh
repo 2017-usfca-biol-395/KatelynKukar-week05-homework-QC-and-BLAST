@@ -53,4 +53,6 @@ echo "fasta files in trimmed directory"
 # This cuts down on the number of uncultured or environmental matches
 # -query is the fasta file of sequences we want to search for matches to
 
-echo "blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query query_seqs.fasta"
+
+# code used to blast singular file and received -query error "Argument "query". File is not accessible: 'ERR1942280.trim.fasta'
+echo "blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query ERR1942280.trim.fasta"
