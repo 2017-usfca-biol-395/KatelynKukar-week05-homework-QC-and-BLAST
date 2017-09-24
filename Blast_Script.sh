@@ -55,4 +55,12 @@ echo "fasta files in trimmed directory"
 
 
 # code used to blast singular file and received -query error "Argument "query". File is not accessible: 'ERR1942280.trim.fasta'
-echo "blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query ERR1942280.trim.fasta"
+blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out $file_blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query data/trimmed/ERR1942280.trim.fasta
+
+
+# code for blast in a for loop
+echo"for file in data/trimmed/*.trim.fasta"
+do
+	echo "blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out output/blast/$file_blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query $file"
+done"
+
