@@ -34,12 +34,9 @@ for file in data/trimmed/*.trim.fastq
 do
 # Use Bioawk to convert trimmed sequences in to Blast format
 	echo "converting trimmed sequences to fasta format for Blast"
-	bioawk -c fastx '{print ">"$name"\n"$seq}' $file > $(basename -s .fastq $file).fasta
+	bioawk -c fastx '{print ">"$name"\n"$seq}' $file > data/trimmed/$(basename -s .fastq $file).fasta
 	echo "trimmed files now in fasta format"
 done
-
-# Move all new fasta format files intro trimmed directory
-mv *.trim.fasta  data/trimmed
 echo "fasta files in trimmed directory"
 
 # Code to Blast trimmed fasta sequences
@@ -54,13 +51,14 @@ echo "fasta files in trimmed directory"
 # -query is the fasta file of sequences we want to search for matches to
 
 
-# code used to blast singular file and received -query error "Argument "query". File is not accessible: 'ERR1942280.trim.fasta'
-blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out $file_blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query data/trimmed/ERR1942280.trim.fasta
+# code used to blast singular file not for all fasta files
+# blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out ERR1942280.trim.fasta_blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query data/trimmed/ERR1942280.trim.fasta
 
 
 # code for blast in a for loop
-echo"for file in data/trimmed/*.trim.fasta"
+for file in data/trimmed/*.trim.fasta
 do
-	echo "blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out output/blast/$file_blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query $file"
-done"
-
+	echo "files blasting"
+	blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out output/blast/$file_blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query $file
+done
+	echo "files have been blasted"
