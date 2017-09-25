@@ -60,5 +60,6 @@ for file in data/trimmed/*.trim.fasta
 do
 	echo "file ${file} blasting"
 	blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out output/blast/$(basename -s .fasta $file)_blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query $file
+	echo "file ${file} blasting"
 done
-	echo "file ${file} has been blasted"
+	echo "all files have been blasted"
