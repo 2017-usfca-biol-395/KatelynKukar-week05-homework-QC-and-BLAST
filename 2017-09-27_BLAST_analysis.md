@@ -1,4 +1,4 @@
-## This is a markdown note sheet stating and summarizing the analysis of amplicon sequences trimmed and run against the NCBI database, using Blast
+## This is a markdown note sheet stating and summarizing the analysis of amplicon sequences trimmed and run against the NCBI database, using Blast analysis
 ###Professor: Naupaka Zimmerman
 ### Date of Assignment: 2017-09-22 to 2017-09-27
 ### Project Owner: Katelyn Kukar; kbkukar@usfca.edu
