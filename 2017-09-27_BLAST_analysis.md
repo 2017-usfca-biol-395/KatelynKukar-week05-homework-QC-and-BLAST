@@ -28,13 +28,33 @@
 #### *Pinus oocarpa*: This is a species of pine tree related to Mexico and Central America
 
 
-
 #### By deducing that the most readily sequenced species variant is a bacteria endemic to a marine clam population, not humans or very humanoid regions, we can conclude there may be potential error in our sequencing results. To test the quality of the matches we must visualize them within our blast files. This percent match data per species variant can be seen in percentmatche_outputs.txt in the output folder.
 
-#### 1. *Solemya pervernicosa gill symbiont* receives a percent match score of 86.16% overall. This leaves a margin of 13.84% for error.
+#### 1. *Solemya pervernicosa gill symbiont* receives a percent match score of 80.82-100%, with a mean of 86.16%.
 ##### Error within blast results can be attributed to our trimming or alignment, however the shear number of sequences received and attributed to this specific organism lends to more statistical anlysis for proof of error against the null hypothesis of a match.
 #### 2. *Bartonella washoensis 99.56-100% match
 #### 3. *Bacteroidetes endosymbiont of Metaseiulus occidentalis* 97.76-100% match
 #### 4. *Aquitalea sp. KJ011* 94.84% match                    
 #### 5. *Pinus oocarpa* 96.02-100% match
  
+### Discussion of Species Variants and Percent Matches
+
+####Noah Fierer conducted the study of interest within his lab at Colorado Boulder. By utilizing this extra piece of information about the participants region of inhabitance we can infer that high altitude bacterial species, forest species, lake species, etc. can be considered as relevant. This is unlike urban settings alone.
+
+#### 1. *Solemya pervernicosa gill symbiont*
+##### Having a salt water clam endosymbiont within many of the participant tests even though all participants reside in Boulder, Colorado lends itself to inferences based on participants interacting with the bivalve in large scale, simultaneously. Potentially, a large clam bake took place prior to the study with many participants going for the free clams (assuming many were poor Boulder students not being sufficiently fed at Tailgates). Upon, further research there is an annual Boulder Clam-bake however if this particular type of clam was served, and if it carried this endosymbiont remains unknown. It also remains unknown if individuals actually participated in the clambake or if this is speculation about their financial status.
+
+#### 2. *Bartonella washoensis
+##### This bacterium can be found on squirrels, dogs, and in meningitis infected humans. Assuming again all participants were Boulder students it can be deduced that potentially meningitis was spread in the dorms. The outdoors nature of the campus also lends itself to the potential for interaction with wildlife that may carry this form of bacterium and concluding its inhabitance on campus grounds.
+##### This bacterium also has a higher average percent match rate meaning that the exact strand was more commonly sequenced among participants yielding more evidence toward a common interaction due to a localized species.
+
+#### 3.  *Bacteroidetes endosymbiont of Metaseiulus occidentalis*
+##### Mites endosymbionts could again be attributed to college living where a lack of cleanliness and sufficient exposure to the outdoors and feral/wild animals is more common. Weekend hiking trips can cause interaction with common deer grazing regions, where in which mites can be found. Squirrels carrying the bacterium analyzed as #2 may also be carriers for mites.
+
+#### 4. *Aquitalea sp. KJ011*
+##### Lake bound proteobacteria can again be attributed to the rustic location of Boulder Colorado. Many students spend weekends at Varsity Lake nearby.
+
+#### 5. *Pinus oocarpa*
+##### This pine tree has a close relative native to Colorado and found in Boulder.
+
+#### Overall, we can see that a majority of the high percentage matches are attributed to the region of the sample population. However, more analysis needs to be done on the most commonly sequenced endosymbiont which is endemic to clams. These clams seem to have only extraneous connections to the study itself, therefore more relevant information is needed.
