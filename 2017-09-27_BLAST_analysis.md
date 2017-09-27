@@ -1,5 +1,5 @@
 ## This is a markdown note sheet stating and summarizing the analysis of amplicon sequences trimmed and run against the NCBI database, using Blast analysis
-###Professor: Naupaka Zimmerman
+### Professor: Naupaka Zimmerman
 ### Date of Assignment: 2017-09-22 to 2017-09-27
 ### Project Owner: Katelyn Kukar; kbkukar@usfca.edu
 
@@ -8,7 +8,7 @@
 #### The Fierer paper discusses the diversity of skin-associated bacterial communities and their ability to colonize objects tounched by their host (electronic devices).
 
 ## Primary Question:
-#### Does the sequencing data match bacterial colonies found on humans or from regions that participants  within the study could have received them from.
+#### Does the sequencing data match bacterial colonies found on humans or from regions that participants  within the study could have received them from?
 
 ## Analysis
 ### Analysis of species variants:
@@ -28,7 +28,7 @@
 #### *Pinus oocarpa*: This is a species of pine tree related to Mexico and Central America
 
 
-#### By deducing that the most readily sequenced species variant is a bacteria endemic to a marine clam population, not humans or very humanoid regions, we can conclude there may be potential error in our sequencing results. To test the quality of the matches we must visualize them within our blast files. This percent match data per species variant can be seen in percentmatche_outputs.txt in the output folder.
+#### By deducing that the most readily sequenced species variant is a bacteria endemic to a marine clam population, not humans or very humanoid regions, we can conclude there may be potential error in our sequencing results. To test the quality of the matches we must visualize them within our blast files. This percent match data per species variant can be seen in percentmatch_outputs.txt in the output folder.
 
 #### 1. *Solemya pervernicosa gill symbiont* receives a percent match score of 80.82-100%, with a mean of 86.16%.
 ##### Error within blast results can be attributed to our trimming or alignment, however the shear number of sequences received and attributed to this specific organism lends to more statistical anlysis for proof of error against the null hypothesis of a match.
@@ -39,7 +39,7 @@
  
 ### Discussion of Species Variants and Percent Matches
 
-####Noah Fierer conducted the study of interest within his lab at Colorado Boulder. By utilizing this extra piece of information about the participants region of inhabitance we can infer that high altitude bacterial species, forest species, lake species, etc. can be considered as relevant. This is unlike urban settings alone.
+#### Noah Fierer conducted the study of interest within his lab at Colorado Boulder. By utilizing this extra piece of information about the participants region of inhabitance we can infer that high altitude bacterial species, forest species, lake species, etc. can be considered as relevant. This is unlike urban settings alone.
 
 #### 1. *Solemya pervernicosa gill symbiont*
 ##### Having a salt water clam endosymbiont within many of the participant tests even though all participants reside in Boulder, Colorado lends itself to inferences based on participants interacting with the bivalve in large scale, simultaneously. Potentially, a large clam bake took place prior to the study with many participants going for the free clams (assuming many were poor Boulder students not being sufficiently fed at Tailgates). Upon, further research there is an annual Boulder Clam-bake however if this particular type of clam was served, and if it carried this endosymbiont remains unknown. It also remains unknown if individuals actually participated in the clambake or if this is speculation about their financial status.
